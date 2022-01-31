@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "slidev build && gh-pages -d dist",
+    "deploy": "slidev build --base /git-introduction-001/ && gh-pages -d dist",
     "dev": "slidev",
     "export": "slidev export"
   },
