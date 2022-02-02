@@ -30,72 +30,87 @@ This series covers following topics:
 
 - ✅ Creating Github Account
 - ✅ Installing Git and Creating new Repository
-- ⬜ Cloning a Repository
+- ✅ Cloning a Repository
+- ⬜ Knowing Working Tree and Commits
 - ⬜ Adding a README.md
 - ⬜ Committing your work
 - ⬜ Uploading new project to Github
 
 ---
 
-# What is Cloning
+# .git folder
 
-- Cloning == Creating a copy
+Every git repository always contains `.git` folder.
 
-Cloning a Repository == Local copy of Repository on your computer
+- `.git` == Git initialised in Repository
+- By default `.git` is hidden/not shown by IDE
+- By default `.git` is hidden in directory too
 
-Four ways:
-
-1. Visual Studio Code (VS Code)
-2. IntelliJ/Android Studio
-3. Terminal
-4. Github Desktop
-
-All 4 are equivalent. Use whatever suits you.
+⚠️ Never manipulate the contents of this folder.
 
 ---
 
-# VS Code
+# Working Tree
 
-<img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_720/https://ubuntu.com/wp-content/uploads/c9f4/visualstudio_code-card.png" alt="img" height="300" width="300"/>
+- Working Tree == Container(Box) in which your project resides
 
-Popular Open Source IDE. Download and install it from wesbite.
+<img src="/s1.png" width="600"/>
 
+Modification/Addition/Deletion of a file will cause **Working Tree to become dirty**
 
----
-
-# Android Studio
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/1024px-IntelliJ_IDEA_Icon.svg.png" alt="img" height="100" width="100"/>
-
-Community Edition is free to use.
-
-<img src="https://techcrunch.com/wp-content/uploads/2017/02/android-studio-logo.png" alt="img" height="200" width="200"/>
-
-Free to use.
+Run `git status` to check tree status
 
 ---
 
-# Terminal
+# Stage/Staging - 1
 
-- Run following command
+- Run `git status` in project:
 
-```shell
-git clone <repo-url>
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+  
+
+- After editing a file:
+
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-For eg:
+---
 
-```shell
-git clone https://github.com/diybyapg/first-project
+# Stage/ Staging - 2
+
+- Staging changes == Prepare changes for modification
+
+- Only those changes will be included by which are in **staged** condition.
+
+- Why **Stage** option exist? So as to not include all changed files
+
+To stage changes, Run:
+
+```
+git add .
 ```
 
-⚠️ Make sure you are in relevant directory
+This will mark all changes as staged and prepare them for commit.
 
-- git - invoke git command
-- clone - clone command
-- url - the repository url to clone
-
-❓ To see all available commands
-
-`git --help`
 ---
+
+# Discard Changes
+
+- To remove the changes done locally
+- Make working tree clean
+
+⚠️ Always use IDE for discarding changes to have better visibility.
