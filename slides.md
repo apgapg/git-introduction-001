@@ -31,7 +31,7 @@ This series covers following topics:
 - ✅ Creating Github Account
 - ✅ Installing Git and Creating new Repository
 - ✅ Cloning a Repository
-- ⬜ Knowing Working Tree and Commits
+- ⬜ Knowing Working Tree and Staging Files
 - ⬜ Adding a README.md
 - ⬜ Committing your work
 - ⬜ Uploading new project to Github
@@ -90,7 +90,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 ---
 
-# Stage/ Staging - 2
+# Stage/Staging - 2
 
 - Staging changes == Prepare changes for modification
 
